@@ -18,7 +18,7 @@
 # (Zamiana klucza z wartością i zostawienie tylko dni nieparzystych).
 # Wynik przypisz na zmienną result
 
-a={}
+a = {}
 result = {
     1: 'Poniedziałek',
     2: 'Wtorek',
@@ -28,12 +28,12 @@ result = {
     6: 'Sobota',
     7: 'Niedziela'
 }
-for x in range(1,8):
-    if x%2==0:
+for x in range(1, 8):
+    if x % 2 == 0:
         del result[x]
-for x in result.items():
-    print(x)
-    a[x[1]]=x[0]
-result=a
+for x, y in result.items():
+    #print(x)
+    a[y] = x
+result = a
 print(a)
 assert 'Poniedziałek' in result

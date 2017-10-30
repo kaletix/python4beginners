@@ -6,4 +6,17 @@
 
 result = None
 
+l = []
+for x in range(1000):
+    if x % 15 == 0:
+        l.append('trzypięć')
+    elif x % 3 == 0:
+        l.append('trzy')
+    elif x % 5 == 0:
+        l.append('pięć')
+    else:
+        l.append(x)
+
+print(l)
+result = l
 assert result[15] == 'trzypięć'
